@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MarkNova - Smart Mark Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background-effects">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ✦
+            </div>
+
+            <div class="logo-text">
+                Mark<span>Nova</span>
+            </div>
+
+        </div>
+
+        <button
+            type="button"
+            id="themeToggle"
+            class="theme-btn"
+            aria-label="Toggle theme"
+        >
+            ☀️
+        </button>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="container">
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="badge">
+                ✨ SMART ACADEMIC CALCULATOR
+            </div>
+
+            <h1>
+                Calculate Your
+                <span>Success.</span>
+            </h1>
+
+            <p>
+                Enter your marks and instantly discover your
+                total, percentage, grade and academic performance.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             CALCULATOR
+        ========================== -->
+
+        <section class="calculator-layout">
+
+
+            <!-- =========================
+                 INPUT CARD
+            ========================== -->
+
+            <div class="card input-card">
+
+                <!-- Student Details -->
+
+                <div class="section-header">
+
+                    <div>
+
+                        <small>
+                            STEP 01
+                        </small>
+
+                        <h2>
+                            Student Details
+                        </h2>
+
+                    </div>
+
+                    <div class="section-icon">
+                        👨‍🎓
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <!-- Name -->
+
+                    <div class="input-group full">
+
+                        <label for="studentName">
+                            Student Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter student name"
+                            autocomplete="name"
+                        >
+
+                    </div>
+
+
+                    <!-- Roll -->
+
+                    <div class="input-group">
+
+                        <label for="rollNumber">
+                            Roll Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="rollNumber"
+                            placeholder="e.g. 1024"
+                        >
+
+                    </div>
+
+
+                    <!-- Class -->
+
+                    <div class="input-group">
+
+                        <label for="studentClass">
+                            Class
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentClass"
+                            placeholder="e.g. 10-A"
+                        >
+
+                    </div>
+
+
+                    <!-- Exam -->
+
+                    <div class="input-group full">
+
+                        <label for="examName">
+                            Examination
+                        </label>
+
+                        <input
+                            type="text"
+                            id="examName"
+                            placeholder="e.g. Final Examination"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <!-- Marks -->
+
+                <div class="section-header">
+
+                    <div>
+
+                        <small>
+                            STEP 02
+                        </small>
+
+                        <h2>
+                            Enter Marks
+                        </h2>
+
+                    </div>
+
+                    <div class="section-icon">
+                        📚
+                    </div>
+
+                </div>
+
+
+                <div class="subjects">
+
+
+                    <!-- Tamil -->
+
+                    <div class="subject-row">
+
+                        <div class="subject-info">
+
+                            <div class="subject-icon tamil">
+                                த
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Tamil
+                                </strong>
+
+                                <small>
+                                    Maximum: 100
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <input
+                            type="number"
+                            class="mark"
+                            data-subject="Tamil"
+                            min="0"
+                            max="100"
+                            step="1"
+                            placeholder="00"
+                        >
+
+                    </div>
+
+
+                    <!-- English -->
+
+                    <div class="subject-row">
+
+                        <div class="subject-info">
+
+                            <div class="subject-icon english">
+                                A
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    English
+                                </strong>
+
+                                <small>
+                                    Maximum: 100
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <input
+                            type="number"
+                            class="mark"
+                            data-subject="English"
+                            min="0"
+                            max="100"
+                            step="1"
+                            placeholder="00"
+                        >
+
+                    </div>
+
+
+                    <!-- Mathematics -->
+
+                    <div class="subject-row">
+
+                        <div class="subject-info">
+
+                            <div class="subject-icon mathematics">
+                                ∑
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Mathematics
+                                </strong>
+
+                                <small>
+                                    Maximum: 100
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <input
+                            type="number"
+                            class="mark"
+                            data-subject="Mathematics"
+                            min="0"
+                            max="100"
+                            step="1"
+                            placeholder="00"
+                        >
+
+                    </div>
+
+
+                    <!-- Science -->
+
+                    <div class="subject-row">
+
+                        <div class="subject-info">
+
+                            <div class="subject-icon science">
+                                ⚗
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Science
+                                </strong>
+
+                                <small>
+                                    Maximum: 100
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <input
+                            type="number"
+                            class="mark"
+                            data-subject="Science"
+                            min="0"
+                            max="100"
+                            step="1"
+                            placeholder="00"
+                        >
+
+                    </div>
+
+
+                    <!-- Social Science -->
+
+                    <div class="subject-row">
+
+                        <div class="subject-info">
+
+                            <div class="subject-icon social">
+                                🌍
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Social Science
+                                </strong>
+
+                                <small>
+                                    Maximum: 100
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <input
+                            type="number"
+                            class="mark"
+                            data-subject="Social Science"
+                            min="0"
+                            max="100"
+                            step="1"
+                            placeholder="00"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Error -->
+
+                <div
+                    id="error"
+                    class="error-message"
+                    role="alert"
+                ></div>
+
+
+                <!-- Buttons -->
+
+                <div class="button-row">
+
+                    <button
+                        type="button"
+                        id="calculate"
+                        class="calculate-btn"
+                    >
+
+                        <span>
+                            Calculate Result
+                        </span>
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="reset"
+                        class="reset-btn"
+                        aria-label="Reset"
+                    >
+                        ↻
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 RESULT CARD
+            ========================== -->
+
+            <div class="card result-card">
+
+
+                <!-- Result Header -->
+
+                <div class="result-header">
+
+                    <div>
+
+                        <small>
+                            YOUR RESULT
+                        </small>
+
+                        <h2>
+                            Performance
+                        </h2>
+
+                    </div>
+
+                    <div
+                        id="status"
+                        class="status"
+                    >
+                        Waiting
+                    </div>
+
+                </div>
+
+
+                <!-- Empty State -->
+
+                <div
+                    id="empty"
+                    class="empty-state"
+                >
+
+                    <div class="empty-icon">
+                        ✨
+                    </div>
+
+                    <h3>
+                        Ready to Calculate
+                    </h3>
+
+                    <p>
+                        Enter all subject marks and
+                        calculate your result.
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
+                     RESULT CONTENT
+                ========================== -->
+
+                <div
+                    id="result"
+                    class="result-content"
+                >
+
+
+                    <!-- Student -->
+
+                    <div class="student-profile">
+
+                        <div
+                            id="avatar"
+                            class="avatar"
+                        >
+                            S
+                        </div>
+
+                        <div class="student-text">
+
+                            <h3 id="resultName">
+                                Student
+                            </h3>
+
+                            <p id="resultDetails">
+                                —
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Score -->
+
+                    <div class="score-panel">
+
+
+                        <div
+                            id="scoreCircle"
+                            class="score-circle"
+                        >
+
+                            <div class="circle-content">
+
+                                <strong id="percentage">
+                                    0%
+                                </strong>
+
+                                <small>
+                                    SCORE
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="grade-panel">
+
+                            <span>
+                                FINAL GRADE
+                            </span>
+
+                            <strong id="grade">
+                                -
+                            </strong>
+
+                            <p id="message">
+                                —
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Statistics -->
+
+                    <div class="statistics">
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon">
+                                🏆
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Total
+                                </small>
+
+                                <strong id="total">
+                                    0/500
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon">
+                                📊
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Average
+                                </small>
+
+                                <strong id="average">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon">
+                                🎯
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Percentage
+                                </small>
+
+                                <strong id="percentage2">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Subject Analysis -->
+
+                    <div class="analysis">
+
+                        <div class="analysis-header">
+
+                            <h3>
+                                Subject Performance
+                            </h3>
+
+                            <span>
+                                / 100
+                            </span>
+
+                        </div>
+
+
+                        <div id="analysis"></div>
+
+                    </div>
+
+
+
+                    <!-- Actions -->
+
+                    <div class="result-actions">
+
+                        <button
+                            type="button"
+                            id="download"
+                        >
+                            📥 Download
+                        </button>
+
+                        <button
+                            type="button"
+                            id="print"
+                        >
+                            🖨 Print
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             HISTORY
+        ========================== -->
+
+        <section class="card history-card">
+
+            <div class="history-header">
+
+                <div>
+
+                    <small>
+                        SAVED RESULTS
+                    </small>
+
+                    <h2>
+                        Result History
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="clearHistory"
+                    class="clear-history"
+                >
+                    Clear All
+                </button>
+
+            </div>
+
+
+            <div id="historyList">
+
+                <div class="no-history">
+                    No results saved yet.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ✦ MarkNova
+        </div>
+
+        <p>
+            Smart Student Analytics
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
