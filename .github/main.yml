@@ -1,0 +1,7 @@
+name:CI
+on:[push]
+job:
+ build:
+     runs on:ubuntu-latest
+     steps:
+     -runs : echo "continuous integration setup"
